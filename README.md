@@ -13,11 +13,22 @@ pip install:
 pip install -r requirements.txt
 ```
 
-## Question Answering 
+##Taks 
+
+### Question Answering 
 cd question_answering
 
-## Artificial Task & Text Classification
+### Artificial Task & Text Classification
 cd text_classification
 
-## Machine Translation
+### Machine Translation
 cd machine_translation
+
+
+## Acknowledgement
+
+If you find the project is helepful, consider citing our paper:
+
+```
+Junshuang Wu, Richong Zhang, Yongyi Mao, Junfan Chen. On Scalar Embedding of Relative Positions in Attention Models. In Proceedings of AAAI 2021.
+```
