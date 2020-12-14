@@ -1,12 +1,15 @@
 # Machine Translation
 
 ## Data Processing
+
+-  download dataset
+
 ```
 bash download.sh
 ```
 
 
-## Run BPE
+- Run BPE
 
 ```
 cd wmt17
@@ -18,8 +21,6 @@ python subword-nmt/learn_joint_bpe_and_vocab.py --input corpus.tc.de corpus.tc.e
 python subword-nmt/apply_bpe.py --vocabulary vocab.de --vocabulary-threshold 50 -c bpe32k < corpus.tc.de > corpus.tc.32k.de
 
 python subword-nmt/apply_bpe.py --vocabulary vocab.en --vocabulary-threshold 50 -c bpe32k < corpus.tc.en > corpus.tc.32k.en
-
-- Run BPE for 2014/2015/2016/2017
 
 for year in {2014,2015,2016,2017}
 do
@@ -35,13 +36,13 @@ do
 done
 ```
 
-## Suffling Training Set
+- Suffling Training Set
 
 ```
 python ../thumt/scripts/shuffle_corpus.py --corpus corpus.tc.32k.de corpus.tc.32k.en --suffix shuf
 ```
 
-## Generating Vocabularies
+- Generating Vocabularies
 
 ```
 python ../thumt/scripts/build_vocab.py corpus.tc.32k.de.shuf vocab.32k.de
