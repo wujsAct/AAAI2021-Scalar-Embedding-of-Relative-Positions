@@ -21,9 +21,9 @@ python subword-nmt/apply_bpe.py --vocabulary vocab.en --vocabulary-threshold 50 
 
 - Run BPE for 2014/2015/2016/2017
 
-for year in {2014,2015,2016,2017}\
-do\
-{\
+for year in {2014,2015,2016,2017}
+do
+{
   python subword-nmt/apply_bpe.py --vocabulary vocab.en
   --vocabulary-threshold 50 -c bpe32k < newstest${year}.tc.en >
   newstest${year}.tc.32k.en
@@ -31,9 +31,8 @@ do\
   python subword-nmt/apply_bpe.py --vocabulary vocab.de
   --vocabulary-threshold 50 -c bpe32k < newstest${year}.tc.de >
   newstest${year}.tc.32k.de
-  
-}\
-done\
+}
+done
 ```
 
 ## Suffling Training Set
@@ -52,23 +51,27 @@ python ../thumt/scripts/build_vocab.py corpus.tc.32k.en.shuf vocab.32k.en
 
 ##Training Models
 
+- AT5
+
 ```
 cd ../
-
-- AT5
 
 bash raw-soft-t5_train_translate-en2de.sh
 
 bash raw-soft-t5-nob_train_translate-en2de.sh
+```
 
 - T5
 
+```
 bash raw-t5_train_translate-en2de.sh
 
 bash raw-t5-nob_train_translate-en2de.sh
+```
 
--- Test Models
+- Test Models
 
+```
 bash test-soft-t5.sh
 
 bash test-soft-t5-nob.sh
