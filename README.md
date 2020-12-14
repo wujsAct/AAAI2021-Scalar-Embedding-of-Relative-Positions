@@ -5,11 +5,11 @@
 - python3.6, tensorflow-gpu==1.15
 - pip install -r requirements.txt
 
-## question answering 
+## Question Answering 
 cd question_answering
 
-## artifical task & text_classification
+## Artificial Task & Text Classification
 cd text_classification
 
-## machine translation
+## Machine Translation
 cd machine_translation
