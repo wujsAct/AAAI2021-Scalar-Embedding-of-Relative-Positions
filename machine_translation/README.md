@@ -50,7 +50,7 @@ python ../thumt/scripts/build_vocab.py corpus.tc.32k.de.shuf vocab.32k.de
 python ../thumt/scripts/build_vocab.py corpus.tc.32k.en.shuf vocab.32k.en
 ```
 
-##Training Models
+## Training Models
 
 - AT5
 
