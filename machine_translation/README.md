@@ -70,7 +70,7 @@ bash raw-t5_train_translate-en2de.sh
 bash raw-t5-nob_train_translate-en2de.sh
 ```
 
-- Test Models
+## Test Models
 
 ```
 bash test-soft-t5.sh
