@@ -2,15 +2,18 @@
 
 ## Generate datasets for artifical tasks
 
+
 ```
-wget -c https://drive.google.com/file/d/1eEFXccubyUyzppFZuN-IFSKowI8h31_w/view?usp=sharing
+cd text_classification
+
+Download data from: https://drive.google.com/file/d/1eEFXccubyUyzppFZuN-IFSKowI8h31_w/view?usp=sharing
 
 unzip data.zip
 
 cd gen_data_utils
 ```
 
-- generate Reber (you can generate the artifical task by using the provided codes)
+- generate Reber
 
 ```
 python t1_reber.py
