@@ -1,19 +1,28 @@
 ## Generate datasets for artifical tasks
 
--generate artifical tasks
+- generate artifical tasks
 cd gen_data_utils
 
--generate Reber
+- generate Reber
+
+```
 python t1_reber.py
+```
 
--generate Process-50
+- generate Process-50
+
+```
 python t2_process.py
+```
 
--generate adding problem
+- generate adding problem
+
+```
 python t3_adding.py 100
+```
 
 
--get embedding
+- get embedding
 GLOVE_DIR=embedding
 mkdir -p $GLOVE_DIR
 wget http://nlp.stanford.edu/data/glove.840B.300d.zip -O $GLOVE_DIR/glove.840B.300d.zip
