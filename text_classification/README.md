@@ -1,7 +1,10 @@
 ## Generate datasets for artifical tasks
 
-- generate artifical tasks
+```
+mkdir data
+
 cd gen_data_utils
+```
 
 - generate Reber
 
