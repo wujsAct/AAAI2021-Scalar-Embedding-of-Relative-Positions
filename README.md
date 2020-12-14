@@ -2,10 +2,8 @@
 
 ## Environment Setting
 
-python3.6, tensorflow-gpu==1.15
-
-## Install python library
-pip install -r requirements.txt
+- python3.6, tensorflow-gpu==1.15
+- pip install -r requirements.txt
 
 ## question answering 
 cd question_answering
