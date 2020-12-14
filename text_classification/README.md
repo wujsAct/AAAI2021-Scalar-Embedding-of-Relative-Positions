@@ -4,8 +4,6 @@
 
 
 ```
-cd text_classification
-
 Download data from: https://drive.google.com/file/d/1eEFXccubyUyzppFZuN-IFSKowI8h31_w/view?usp=sharing
 
 unzip data.zip
