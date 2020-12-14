@@ -1,3 +1,5 @@
+# Artificial Tasks & Text Classification
+
 ## Generate datasets for artifical tasks
 
 ```
@@ -26,23 +28,41 @@ python t3_adding.py 100
 
 
 - get embedding
+
+```
 GLOVE_DIR=embedding
+
 mkdir -p $GLOVE_DIR
+
 wget http://nlp.stanford.edu/data/glove.840B.300d.zip -O $GLOVE_DIR/glove.840B.300d.zip
+
 unzip $GLOVE_DIR/glove.840B.300d.zip
+```
 
-## start train Artifical task and text classification
+## Model training
+
+```
 cd Transformer
+```
 
-Due to extract the word embedding from Glove for text classificaiton, it may take a bit longer time when you first run.
+- Due to extract the word embedding from Glove for text classificaiton, it may take a bit longer time when you first run.
 
--run Non-PE 
+- run Non-PE 
+
+```
 bash scripts/non-pe-run.sh
+```
 
--run T5
+- run T5
+
+```
 bash scripts/t5-run.sh
 bash scripts/t5-nb-run.sh
+```
 
--run AT5 (soft-t5)
+- run AT5 (soft-t5)
+
+```
 bash scripts/soft-t5-run.sh
 bash scripts/soft-t5-nb-run.sh
+```
