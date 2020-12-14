@@ -3,12 +3,14 @@
 ## Generate datasets for artifical tasks
 
 ```
-mkdir data
+wget -c https://drive.google.com/file/d/1eEFXccubyUyzppFZuN-IFSKowI8h31_w/view?usp=sharing
+
+unzip data.zip
 
 cd gen_data_utils
 ```
 
-- generate Reber
+- generate Reber (you can generate the artifical task by using the provided codes)
 
 ```
 python t1_reber.py
