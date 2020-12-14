@@ -13,7 +13,7 @@ pip install:
 pip install -r requirements.txt
 ```
 
-##Taks 
+## Tasks
 
 ### Question Answering 
 cd question_answering
@@ -27,7 +27,7 @@ cd machine_translation
 
 ## Acknowledgement
 
-If you find the project is helepful, consider citing our paper:
+If you find this project helepful, consider citing our paper:
 
 ```
 Junshuang Wu, Richong Zhang, Yongyi Mao, Junfan Chen. On Scalar Embedding of Relative Positions in Attention Models. In Proceedings of AAAI 2021.
