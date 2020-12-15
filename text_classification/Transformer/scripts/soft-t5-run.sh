@@ -19,12 +19,12 @@ num_attention_heads=6
 transformer_ret_pooling=last
 lr=2e-4
 
-l1_width=$1
-l2_width=$2
+#MLP setting may changed
+l1_width=16
+l2_width=4
 stddev=0.01
 
-#{mr,subj,cr,mpqa,TREC,sst2}
-for data in $3
+for data in {mr,subj,cr,TREC,sst2}
 do
 {
   for bucket_slop_min in 1.0
@@ -33,10 +33,10 @@ do
     for bucket_slop_max in 10.0
     do
     {
-      for trail in 1
+      for trail in {1,2,3,4,5}
       do
       {
-        CUDA_VISIBLE_DEVICES=0 python train.py \
+        nohup srun --exclude=dell-gpu-31,dell-gpu-20 --gres=gpu:1 python train.py \
       --model_name=${model_name} \
       --transformer_ret_pooling=${transformer_ret_pooling} \
       --data=${data} \
@@ -53,7 +53,7 @@ do
       --l1_width=${l1_width}\
       --l2_width=${l2_width}\
       --stddev=${stddev}\
-      --is_training=True #> ${log_dir}/${model_name}_${data}_L-${num_hidden_layers}_H-${num_attention_heads}_W-${embedding_dim}-last-${training_nums}-${bucket_slop_min}-${bucket_slop_max}-${trail} &
+      --is_training=True > ${log_dir}/${model_name}_${data}_L-${num_hidden_layers}_H-${num_attention_heads}_W-${embedding_dim}-last-${training_nums}-${bucket_slop_min}-${bucket_slop_max}-${l1_width}-${l2_width}-${trail} &
       }
       done
     }
