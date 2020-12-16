@@ -201,7 +201,7 @@ def dev_point_wise():
   
   if not os.path.exists(ckpt_path):
     os.makedirs(ckpt_path)
-      
+    
   if 'concat' in FLAGS.model_name:
     bert_config.hidden_size = 2*FLAGS.embedding_dim
     bert_config.intermediate_size = bert_config.hidden_size*2
@@ -425,8 +425,15 @@ if __name__ == '__main__':
     bert_config.bucket_slop_min=FLAGS.bucket_slop_min
     bert_config.bucket_slop_max=FLAGS.bucket_slop_max
     
+    bert_config.l1_width=FLAGS.l1_width
+    bert_config.l2_width=FLAGS.l2_width
+    bert_config.stddev=FLAGS.stddev
+    
     ckpt_path = ckpt_path+ '_'+str(bert_config.bucket_slop_min)
     ckpt_path = ckpt_path+ '_'+str(bert_config.bucket_slop_max)
+    ckpt_path = ckpt_path+ '_'+str(bert_config.l1_width)
+    ckpt_path = ckpt_path+ '_'+str(bert_config.l2_width)
+    ckpt_path = ckpt_path+ '_'+str(bert_config.stddev)
   
   if FLAGS.data=='TREC' or FLAGS.data=='sst2' or FLAGS.data=='aclImdb' or FLAGS.data=='sst5':
     dev_point_wise()
